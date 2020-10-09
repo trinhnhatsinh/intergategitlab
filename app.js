@@ -7,6 +7,10 @@ app.get('/', (request, response) => {
   response.send('Hello, Server!');
 });
 
+app.post('/', (request, response) => {
+  console.log(`URL: vaof khoong`);
+});
+
 const server = app.listen(process.env.PORT|| 5000, (error) => {
   if (error) return console.log(`Error: ${error}`);
 
