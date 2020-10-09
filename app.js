@@ -1,6 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const port = 3000;
 const app = express();
+
+app.use(bodyParser);
 
 app.get('/', (request, response) => {
   console.log(`URL: ${request.url}`);
@@ -8,7 +12,7 @@ app.get('/', (request, response) => {
 });
 
 app.post('/', (request, response) => {
-  console.log(`URL: vaof khoong` , request);
+  console.log(`URL: vaof khoong` , request.body);
   response.sendStatus(200)
 });
 
