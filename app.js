@@ -8,7 +8,8 @@ app.get('/', (request, response) => {
 });
 
 app.post('/', (request, response) => {
-  console.log(`URL: vaof khoong`);
+  console.log(`URL: vaof khoong` , request);
+  response.sendStatus(200)
 });
 
 const server = app.listen(process.env.PORT|| 5000, (error) => {
