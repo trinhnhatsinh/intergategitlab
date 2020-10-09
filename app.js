@@ -7,7 +7,7 @@ app.get('/', (request, response) => {
   response.send('Hello, Server!');
 });
 
-const server = app.listen(port|| 5000, (error) => {
+const server = app.listen(process.env.PORT|| 5000, (error) => {
   if (error) return console.log(`Error: ${error}`);
 
   console.log(`Server listening on port ${server.address().port}`);
